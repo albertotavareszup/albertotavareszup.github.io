@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2020-06-11T07:58:31-03:00",
+  "id": "desafio-mercado-livre",
+  "duration": 407,
+  "title": "Será que você é capaz de implementar uma api para servir o mercado livre?",
+  "authors": "Zarin",
+  "summary": "Desafio: construir uma API que simule o funcionamento de parte do mercado livre.",
+  "source": "how-to-write-a-codelab-v2.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "web"
+  ],
+  "tags": [
+    "medium"
+  ],
+  "feedback": "https://zarin.io",
+  "url": "desafio-mercado-livre"
+}

@@ -1,0 +1,233 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Será que você é capaz de implementar uma api para servir o mercado livre?</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="desafio-mercado-livre"
+                  title="Será que você é capaz de implementar uma api para servir o mercado livre?"
+                  environment="web"
+                  feedback-link="https://zarin.io">
+    
+      <google-codelab-step label="Como funciona" duration="5">
+        <p>A ideia aqui é que você e o código sejam protagonistas. Cada capítulo tem uma funcionalidade para ser desenvolvida. Para te ajudar na implementação, disponibilizamos alguns materiais de suporte com informações que podem ser úteis para você :).</p>
+<p>O detalhe interessante é que o material é justamente de suporte.</p>
+<ul>
+<li>Acha que precisa do suporte? Então vai lá e consulta</li>
+<li>Acha que não precisa? Então não consulta.</li>
+<li>Acha que não precisa mas quer saber o que pensamos: Faz primeiro e consulta depois.</li>
+</ul>
+<p>A parte legal é que você usa o material de suporte que faz sentido para você na ordem que você quiser. Este é um material online criado para ser adaptado ao seu ritmo e seu background.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Colabore com outros(as) zuppers" duration="2">
+        <p>Cada funcionalidade pode ser implementada de n formas, usando tecnologias diferentes e tudo mais. Nossa sugestão é que além de você publicar seu código no github e deixar disponível para outros(as) zuppers, você também compartilhe posts contando a história de cada funcionalidade implementada :). Alguns tópicos legais são: O que você aprendeu? Quais foram as dificuldades?</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Setup do projeto" duration="10">
+        <p>Agora vamos começar o projeto de verdade. Ele pode ser desenvolvido na linguagem que mais se adeque as suas necessidades. Alguns exemplos:</p>
+<ul>
+<li>Java</li>
+<li>Kotlin</li>
+<li>Javascript</li>
+<li>C#</li>
+</ul>
+<p>Combinado com alguma dessas linguagens, minha sugestão é que você escolha o conjunto de tecnologias que mais te interessa no momento e que você acha que vai fazer você ser uma versão melhor na sua carreira e, consequentemente, no seu momento profissional. Exemplos de combinações:</p>
+<ul>
+<li>Java + Spring</li>
+<li>Kotlin + Spring</li>
+<li>Javascript + Nest.js</li>
+<li>C# + asp.net core</li>
+</ul>
+<p>Caso queira usar outra combinação fique a vontade. Configure seu projeto, rode um hello world, verifique se está tudo funcionando e siga em frente :).</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Cadastro de um novo usuário" duration="30">
+        <h2 is-upgraded>necessidades</h2>
+<ul>
+<li>precisamos saber o instante do cadastro, login e senha.</li>
+</ul>
+<h2 is-upgraded>restrições</h2>
+<ul>
+<li>O instante não pode ser nulo e não pode ser no futuro</li>
+<li>O login não pode ser em branco ou nula</li>
+<li>O login precisa ter o formato do email</li>
+<li>A senha não pode ser branca ou nula</li>
+<li>A senha precisa ter no mínimo 6 caracteres</li>
+<li>A senha deve ser guardada usando algum algoritmo de hash da sua escolha.</li>
+</ul>
+<h2 is-upgraded>resultado esperado</h2>
+<ul>
+<li>O usuário precisa estar criado no sistema</li>
+<li>O cliente que fez a requisição precisa saber que o usuário foi criado. Apenas um retorno com status 200 está suficente.</li>
+</ul>
+<h2 is-upgraded>material de suporte</h2>
+<p>É natural que vamos querer salvar esses dados em algum lugar, como um banco de dados. A JPA vem como uma especificação que cria as interfaces de acesso ao banco de dados. O Hibernate, por sua vez, é a implementação da JPA.</p>
+<p><a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.core-concepts" target="_blank">O Spring possui um projeto que une a JPA e facilita na criação da camada de acesso a dados, que é o Spring Data JPA. Uma boa fonte para aprender sobre esse projeto é a documentação</a>.</p>
+<p><a href="https://spring.io/blog/2011/02/10/getting-started-with-spring-data-jpa/" target="_blank">Além disso, existem bons posts que mostram como começar a criar essa camada de acesso aos dados</a>.</p>
+<p><a href="https://www.caelum.com.br/apostila-java-web/uma-introducao-pratica-ao-jpa-com-hibernate/#mapeando-uma-classe-tarefa-para-nosso-banco-de-dados" target="_blank">A apostila aberta da Caelum, também é uma fonte interessante se você quiser saber um pouco mais sobre JPA e Hibernate também</a></p>
+<p><a href="https://beanvalidation.org/2.0/spec/" target="_blank">Além da camada de acesso ao banco, o Hibernate implementa a especificação da Bean Validation que é um conjunto de regras de validação que a gente pode utilizar no projeto. A especificação é uma fonte excelente para consulta</a>. <a href="https://www.baeldung.com/spring-boot-bean-validation" target="_blank">Esse post da Baeldung também é uma fonte legal para utilizar a Bean Validation com Spring Boot</a></p>
+<p><a href="https://youtu.be/vOaRwq5JOXk" target="_blank">Vídeo sobre DDD</a></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Não podemos ter dois usuários com o mesmo email." duration="30">
+        <h2 is-upgraded>necessidades</h2>
+<ul>
+<li>Só pode existir um usuário com o mesmo email.</li>
+</ul>
+<h2 is-upgraded>resultado esperado</h2>
+<ul>
+<li>Status 400 informando que não foi possível realizar um cadastro com este email.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Cadastro de categorias" duration="30">
+        <h2 is-upgraded>necessidades</h2>
+<p>No mercado livre você pode criar hierarquias de categorias livres. Ex: Tecnologia -&gt; Celulares -&gt; Smartphones -&gt; Android,Ios etc. Perceba que o sistema precisa ser flexível o suficiente para que essas sequências sejam criadas.</p>
+<ul>
+<li>Toda categoria tem um nome</li>
+<li>A categoria pode ter uma categoria mãe</li>
+</ul>
+<h2 is-upgraded>restrições</h2>
+<ul>
+<li>O nome da categoria é obrigatório</li>
+<li>O nome da categoria precisa ser único</li>
+</ul>
+<h2 is-upgraded>resultado esperado</h2>
+<ul>
+<li>categoria criada e status 200 retornado pelo endpoint.</li>
+<li>caso exista erros de validação, o endpoint deve retornar 400 e o json dos erros.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="TRABALHANDO COM O USUÁRIO LOGADO(VAI IMPACTAR NO RESTO DO CÓDIGO)" duration="0">
+        <h2 is-upgraded>problema</h2>
+<p>Você precisa configurar um mecanismo de autenticação via token, provavelmente com o Spring Security, para permitir o login. Caso queira, é só olhar nesse link aqui =&gt; https://gitlab.com/aovs/projetos-cursos/fj27-alura-forum-api/tree/master/src/main/java/br/com/alura/forum/security . Aí tem todo código de segurança necessário para autenticar no Spring Security via token jwt. Fique a vontade para entendê-lo e aplicar no projeto.</p>
+<h2 is-upgraded>Solução que eu faria para focar mais nas features</h2>
+<p>Em todo trecho de código que precisa do usuário logado, na primeira linha do método do controller que precisa de um usuário logado, eu buscaria pelo usuário com um email específico e usaria ele como &#34;referência logada&#34; na aplicação.</p>
+<p>Depois, se você quiser, é só habilitar o security, receber o usuário como argumento do método e apagar essa linha... Tudo deveria funcionar normalmente.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Usuário logado cadastra novo produto" duration="30">
+        <h2 is-upgraded>explicação</h2>
+<p>Aqui a gente vai permitir o cadastro de um produto por usuário logado.</p>
+<h2 is-upgraded>necessidades</h2>
+<ul>
+<li>Tem uma mais fotos associadas</li>
+<li>Tem um nome</li>
+<li>Tem um valor</li>
+<li>Tem quantidade disponível</li>
+<li>Características(cada produto pode ter um conjunto de características diferente)  <ul>
+<li>Da uma olhada nos detalhes de produtos diferentes do mercado livre.</li>
+</ul>
+</li>
+<li>Tem uma descrição que vai ser feita usando Markdown</li>
+<li>Pertence a uma categoria</li>
+<li>Instante de cadastro</li>
+</ul>
+<h2 is-upgraded>restrições</h2>
+<ul>
+<li>Tem uma ou mais fotos</li>
+<li>Nome é obrigatório</li>
+<li>Valor é obrigatório e maior que zero</li>
+<li>Quantidade é obrigatório e &gt;= 0</li>
+<li>O produto possui pelo menos três características</li>
+<li>Descrição é obrigatória e tem máximo de 1000 caracteres.</li>
+<li>A categoria é obrigatória</li>
+</ul>
+<h2 is-upgraded>resultado esperado</h2>
+<ul>
+<li>Um novo produto criado e status 200 retornado</li>
+<li>Caso dê erro de validação retorne 400 e o json dos erros</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Não podemos ter dois usuários com o mesmo email." duration="30">
+        
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Não podemos ter dois usuários com o mesmo email." duration="30">
+        
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Não podemos ter dois usuários com o mesmo email." duration="30">
+        
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Não podemos ter dois usuários com o mesmo email." duration="30">
+        
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Não podemos ter dois usuários com o mesmo email." duration="30">
+        
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Não podemos ter dois usuários com o mesmo email." duration="30">
+        
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Não podemos ter dois usuários com o mesmo email." duration="30">
+        
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Não podemos ter dois usuários com o mesmo email." duration="30">
+        
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Não podemos ter dois usuários com o mesmo email." duration="30">
+        
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
